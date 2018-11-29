@@ -3,9 +3,11 @@ package htf.artifact.base64Decoding;
 import org.springframework.stereotype.Component;
 
 import javax.imageio.ImageIO;
+import javax.sound.midi.Patch;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.nio.file.Path;
 import java.util.Base64;
 
 @Component
