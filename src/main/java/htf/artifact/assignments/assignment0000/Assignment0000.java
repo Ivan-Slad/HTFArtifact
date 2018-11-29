@@ -1,4 +1,4 @@
-package htf.artifact.assignments;
+package htf.artifact.assignments.assignment0000;
 
 
 import htf.artifact.base64Decoding.ImageStringDecoder;
