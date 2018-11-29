@@ -1,10 +1,10 @@
-package htf.artifact.assignments.assignement1;
+package htf.artifact.assignments.assignement0010;
 
 import org.springframework.context.annotation.*;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 
 @Configuration
-public class assignment1Config {
+public class Assignment0010Config {
 
     @Bean
     public Jaxb2Marshaller marshaller() {

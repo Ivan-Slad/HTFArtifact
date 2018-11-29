@@ -1,4 +1,4 @@
-package htf.artifact.assignments.assignement1;
+package htf.artifact.assignments.assignement0010;
 
 import java.util.*;
 
