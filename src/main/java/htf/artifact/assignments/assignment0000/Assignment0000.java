@@ -12,7 +12,7 @@ public class Assignment0000 {
     private final ImageStringDecoder imageStringDecoder;
     private final PostSolution postSolution;
     private final String path;
-    public Assignment0000(ImageStringDecoder imageStringDecoder, PostSolution postSolution, @Value("images") String path) {
+    public Assignment0000(ImageStringDecoder imageStringDecoder, PostSolution postSolution, @Value("${images}") String path) {
         this.imageStringDecoder = imageStringDecoder;
         this.postSolution = postSolution;
         this.path = path;
@@ -32,7 +32,7 @@ public class Assignment0000 {
                 }
             } }
         String response = postSolution.postSolved(stringBuilder.toString(), "0000");
-        imageStringDecoder.decodeToImage(response, path+"/image0000");
+        imageStringDecoder.decodeToImage(response, path+"/image0000.png");
     }
 
 

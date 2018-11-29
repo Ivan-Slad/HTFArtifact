@@ -17,7 +17,7 @@ public class Assignment1000 {
     private PostSolution postSolution;
 
     private final String path;
-    public Assignment1000(ImageStringDecoder imageStringDecoder, PostSolution postSolution,@Value("images") String path) {
+    public Assignment1000(ImageStringDecoder imageStringDecoder, PostSolution postSolution,@Value("${images}") String path) {
         this.imageStringDecoder = imageStringDecoder;
         this.postSolution = postSolution;
         this.path = path;
@@ -44,7 +44,7 @@ public class Assignment1000 {
         stringBuilder.append("}");
         System.out.println(stringBuilder.toString());
         String response = postSolution.postSolved(stringBuilder.toString(), "1000");
-        imageStringDecoder.decodeToImage(response, path+"/image1000");
+        imageStringDecoder.decodeToImage(response, path+"/image1000.png");
     }
 
     private static final int BOARD_SIZE = 9;
