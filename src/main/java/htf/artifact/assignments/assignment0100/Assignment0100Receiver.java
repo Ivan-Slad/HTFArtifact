@@ -1,7 +1,9 @@
 package htf.artifact.assignments.assignment0100;
 
+import htf.artifact.base64Decoding.ImageStringDecoder;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -9,8 +11,18 @@ import org.springframework.stereotype.Component;
 public class Assignment0100Receiver {
     public static String solution="";
 
+    private final ImageStringDecoder imageStringDecoder;
+
+    private final String path;
+
+    public Assignment0100Receiver(ImageStringDecoder imageStringDecoder, @Value("${images}") String path) {
+        this.imageStringDecoder = imageStringDecoder;
+        this.path = path;
+    }
+
     @RabbitHandler
     public void receive(String in){
-        System.out.println(solution);
+        System.out.println(in);
+        //imageStringDecoder.decodeToImage(in, path + "/image0100.png");
     }
 }
