@@ -23,6 +23,9 @@ public class Assignment0100Receiver {
     @RabbitHandler
     public void receive(String in){
         System.out.println(in);
-        //imageStringDecoder.decodeToImage(in, path + "/image0100.png");
+        StringBuilder sb = new StringBuilder(in);
+        String response = sb.substring(sb.indexOf("/"));
+        System.out.println(response);
+        imageStringDecoder.decodeToImage(response, path + "/image0100.png");
     }
 }

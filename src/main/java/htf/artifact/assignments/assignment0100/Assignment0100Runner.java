@@ -15,7 +15,7 @@ public class Assignment0100Runner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        queue.send("future-the-hack");
+        queue.send("hack-the-future");
         System.out.println("send");
     }
 }
