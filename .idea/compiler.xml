@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="artifact.main" target="1.8" />
+      <module name="artifact.test" target="1.8" />
+      <module name="htf.artifact.main" target="1.8" />
+      <module name="htf.artifact.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

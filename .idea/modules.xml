@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/htf.artifact.iml" filepath="$PROJECT_DIR$/.idea/modules/htf.artifact.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/artifact.iml" filepath="$PROJECT_DIR$/.idea/modules/artifact.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/artifact.main.iml" filepath="$PROJECT_DIR$/.idea/modules/artifact.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/artifact.test.iml" filepath="$PROJECT_DIR$/.idea/modules/artifact.test.iml" />
     </modules>
   </component>
 </project>
