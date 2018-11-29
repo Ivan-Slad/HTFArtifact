@@ -2,7 +2,9 @@ package htf.artifact.assignments.assignment0100;
 
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Assignment0100Queue {
 
     private final RabbitTemplate template;
@@ -13,9 +15,8 @@ public class Assignment0100Queue {
         this.template = template;
         this.queue = queue;
     }
-    
-    private void send(String message, Queue queue) {
-        this.template.convertAndSend(queue.getName(), message);
 
+    public void send(String message) {
+        this.template.convertAndSend(queue.getName(), message);
     }
 }

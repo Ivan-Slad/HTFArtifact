@@ -11,8 +11,6 @@ public class Assignment0100Receiver {
 
     @RabbitHandler
     public void receive(String in){
-        char input = (char) Integer.parseInt(in,2);
-        solution+=input;
         System.out.println(solution);
     }
 }
