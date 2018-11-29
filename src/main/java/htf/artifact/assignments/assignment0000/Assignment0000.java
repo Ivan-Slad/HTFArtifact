@@ -3,6 +3,7 @@ package htf.artifact.assignments.assignment0000;
 
 import htf.artifact.base64Decoding.ImageStringDecoder;
 import htf.artifact.post.PostSolution;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -10,10 +11,11 @@ public class Assignment0000 {
 
     private final ImageStringDecoder imageStringDecoder;
     private final PostSolution postSolution;
-
-    public Assignment0000(ImageStringDecoder imageStringDecoder, PostSolution postSolution) {
+    private final String path;
+    public Assignment0000(ImageStringDecoder imageStringDecoder, PostSolution postSolution, @Value("images") String path) {
         this.imageStringDecoder = imageStringDecoder;
         this.postSolution = postSolution;
+        this.path = path;
     }
 
     public void decrypt() {
@@ -30,7 +32,7 @@ public class Assignment0000 {
                 }
             } }
         String response = postSolution.postSolved(stringBuilder.toString(), "0000");
-        imageStringDecoder.decodeToImage(response, "C://KdG/HTF/images/image0000.png");
+        imageStringDecoder.decodeToImage(response, path+"/image0000");
     }
 
 
